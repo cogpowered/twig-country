@@ -1,0 +1,22 @@
+{
+    "name": "cogpowered/twig-country",
+    "description": "Twig extension to output a country select input",
+    "keywords": ["twig", "extension", "country", "html", "select"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Crowe",
+            "email": "rob@cogpowered.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.15",
+        "aura/html": "2.0.*@dev",
+        "umpirsky/country-list": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "CogPowered\\Twig\\Extension\\Country": "src/"
+        }
+    }
+}
