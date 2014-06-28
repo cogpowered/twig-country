@@ -4,6 +4,7 @@ namespace CogPowered\Twig\Extension\Country;
 
 use Twig_Extension;
 use Aura\Html\HelperLocatorFactory;
+use Twig_SimpleFunction;
 
 class Form extends Twig_Extension
 {
