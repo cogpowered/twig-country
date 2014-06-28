@@ -15,7 +15,7 @@
         "umpirsky/country-list": "*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "CogPowered\\Twig\\Extension\\Country": "src/"
         }
     }
