@@ -112,6 +112,11 @@ class Form extends Twig_Extension
         $html      = $this->getHtml();
         $countries = $this->getCountries($locale);
 
+        // If nothing selected, make sure the placeholder is used
+        if ($selected === null) {
+            $selected = '';
+        }
+
         // Build select input
         $select = $html->input(array(
             'type'    => 'select',
