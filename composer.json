@@ -11,7 +11,7 @@
     ],
     "require": {
         "twig/twig": "~1.15",
-        "aura/html": "2.0.0-beta1",
+        "aura/html": "2.0.*@dev",
         "umpirsky/country-list": "*"
     },
     "autoload": {
