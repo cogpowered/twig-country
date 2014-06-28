@@ -114,19 +114,21 @@ class Form extends Twig_Extension
 
         // Build select input
         $select = $html->input(array(
-            'type' => 'select',
-            'name' => $name,    // aura.html -> this doesn't actually work
+            'type'    => 'select',
+            'name'    => $name,      // aura.html -> this doesn't actually work
+            'value'   => $selected,  // doesn't work either
+            'options' => $countries,
         ));
 
         // Set attributes
-        // Fixes a bug where the name is ignored
+        // Fixes a bug where the name & value are ignored
+        // The need for this should disappear
         if (!isset($attributes['name'])) {
             $attributes['name'] = $name;
         }
 
         $select->attribs($attributes);
         $select->selected($selected);
-        $select->options($countries);
 
         return (string) $select;
     }
