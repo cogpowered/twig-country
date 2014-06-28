@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CogPowered\\Twig\\Extension\\Country": "src/"
+            "CogPowered\\Twig\\Extension\\Country\\": "src/"
         }
     }
 }
