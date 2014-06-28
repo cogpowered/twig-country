@@ -107,7 +107,7 @@ class Form extends Twig_Extension
      *
      * @return string
      */
-    public function formCountry($name, $selected = null, array $attributes = array(), $locale = 'en')
+    public function formCountry($name, $selected = '', array $attributes = array(), $locale = 'en')
     {
         $html      = $this->getHtml();
         $countries = $this->getCountries($locale);
@@ -115,17 +115,17 @@ class Form extends Twig_Extension
         // Build select input
         $select = $html->input(array(
             'type' => 'select',
-            'name' => $name,
+            'name' => $name,    // aura.html -> this doesn't actually work
         ));
 
-        if (!empty($selected)) {
-            $select->selected($selected);
+        // Set attributes
+        // Fixes a bug where the name is ignored
+        if (!isset($attributes['name'])) {
+            $attributes['name'] = $name;
         }
 
-        if (!empty($attributes)) {
-            $select->attribs($attributes);
-        }
-
+        $select->attribs($attributes);
+        $select->selected($selected);
         $select->options($countries);
 
         return (string) $select;
