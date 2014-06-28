@@ -1,6 +1,6 @@
 <?php
 
-namespace CogPowered\\Twig\\Extension\\Country;
+namespace CogPowered\Twig\Extension\Country;
 
 use Twig_Extension;
 use Aura\Html\HelperLocatorFactory;
